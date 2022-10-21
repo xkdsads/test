@@ -1,0 +1,23 @@
+<script>
+    var str = 'oabcoefoxyozzopbqB';
+    var o = {};
+    for (var i = 0; i < str.length; i++) {
+        var chars = str.charAt(i);
+        if (o[chars]) {
+            o[chars]++;
+        } else {
+            o[chars] = 1;
+        }
+    }
+    console.log(o);
+    var max = 0;
+    var ch = '';
+    for (var key in o) {
+        if (o[key] > max) {
+            max = o[key];
+            ch = key;
+        }
+    }
+    console.log('最多：' + ch + '次数：' + max);
+
+</script>
